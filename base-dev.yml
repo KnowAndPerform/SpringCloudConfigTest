@@ -1,0 +1,25 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: tensquare-base #指定应用名称 后边使用SpringCloud管理微服务会用到
+
+#数据库相关配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.106.150:3306/tensquare_base?characterEncoding=utf-8
+    username: root
+    password: root
+#jpa相关配置
+  jpa:
+    generate-ddl: false #自动建表
+    show-sql: true
+    database: mysql
+    #eureka注册中心地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:6868/eureka,http://peer2:6869/eureka,http://peer3:6870/eureka
+  instance:
+    prefer-ip-address: true
+
