@@ -1,5 +1,5 @@
 server:
-  port: 9001
+  port: 9002
 spring:
   application:
     name: tensquare-base #指定应用名称 后边使用SpringCloud管理微服务会用到
